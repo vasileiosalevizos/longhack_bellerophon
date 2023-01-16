@@ -1,5 +1,17 @@
 # Longhack team Bellerophon
 
+## Wireframes
+
+https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
+
+## Next steps
+
+* Create React App
+* Build wireframe components
+* Create machine learning model
+
+## About
+
 The aging population is a growing trend in many parts of the world. This is due to a combination of factors, including advancements in medical technology and healthcare, which have led to increased life expectancy, and declining fertility rates, which have led to fewer births. As a result, there are now more older adults than ever before, and this demographic shift is having a significant impact on society, including healthcare, social security, and economic growth. Additionally, The World Health Organization (WHO) has declared that the older population is more vulnerable to chronic diseases such as heart disease, stroke, cancer, diabetes, and depression.
 
 There are several causes of the aging population trend:
@@ -53,7 +65,7 @@ Overall, an aging app can be a useful tool for older adults to manage their heal
 
 ## Install the app
 
-### Start back-end
+### Start back-end (FastAPI)
 
 Build docker image.
 
