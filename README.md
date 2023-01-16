@@ -6,6 +6,7 @@ https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
 
 ## Next steps
 
+* <strike> Back-end API template with FastAPI </strike>
 * Create React App
   * Add build instructions
   * Add home screen
