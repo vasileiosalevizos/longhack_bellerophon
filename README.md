@@ -72,7 +72,38 @@ Overall, an aging app can be a useful tool for older adults to manage their heal
 
 ### Start back-end (FastAPI)
 
-Build docker image.
+In order to run the build command for a project that uses Docker and Docker Compose, you must have both Docker and Docker Compose installed on your system. Docker is a platform for running containerized applications, and Docker Compose is a tool for defining and running multi-container Docker applications. Together, these tools allow you to build, run, and manage your application and its dependencies in a standardized and efficient way.
+
+Here are the instructions for installing Docker and Docker Compose on a few popular operating systems:
+
+* Windows:
+
+1. Download the Docker Desktop installer from the Docker website.
+2. Run the installer and follow the prompts to install Docker.
+3. Verify that Docker is running by opening a command prompt and running the command `docker --version`.
+4. Install Docker Compose by downloading the executable from the Docker website.
+5. Move the executable to a directory that is in your system's PATH, such as `C:\Windows\System32`.
+Verify that Docker Compose is installed by running the command `docker-compose --version`.
+
+* macOS:
+
+1. Download the Docker Desktop installer from the Docker website.
+2. Run the installer and follow the prompts to install Docker.
+3. Verify that Docker is running by opening a terminal and running the command `docker --version`.
+4. Install Docker Compose by running the command brew install `docker-compose`.
+5. Verify that Docker Compose is installed by running the command `docker-compose --version`.
+
+* Ubuntu:
+
+1. Update the package index by running the command `sudo apt-get update`.
+2. Install Docker by running the command `sudo apt-get install -y docker.io`.
+3. Verify that Docker is running by running the command `docker --version`.
+4. Install Docker Compose by running the command `sudo apt-get install -y docker-compose`.
+5. Verify that Docker Compose is installed by running the command `docker-compose --version`.
+
+``Please note that depending on the version of your operating system, the commands might change.``
+
+Once you have installed Docker and Docker Compose, you should be able to run the build command for your project.
 
 ```bash
 docker-compose up -d --build
