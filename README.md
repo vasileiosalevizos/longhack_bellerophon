@@ -116,6 +116,22 @@ docker-compose up -d --build
 docker-compose exec web pytest .
 ```
 
+### React front-end build
+
+```npm start
+npm install
+```
+
+```bash
+npm start
+```
+
+Test runner
+
+```bash
+npm run build
+```
+
 ## Team
 
 * Vasileios Alevizos
