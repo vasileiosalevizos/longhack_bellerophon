@@ -118,6 +118,8 @@ docker-compose exec web pytest .
 
 ### React front-end build
 
+Go to `src/frontend/`
+
 ```npm start
 npm install
 ```
