@@ -8,10 +8,10 @@ https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
 
 * <strike> Back-end API template with FastAPI </strike>
 * Create React App
-  * Add build instructions
-  * Add home screen
-  * Add screenshots
-  * Add multi-media
+  * <strike> Add build instructions </strike>
+  * <strike> Add home screen </strike>
+  * Add screenshots 
+  * <strike> Add multi-media </strike>
 * Build wireframe components
 * Create machine learning model
 
