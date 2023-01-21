@@ -136,18 +136,33 @@ npm run build
 
 ## Anotation tool and genomic dataset
 
-Dataset download:
+You can use the `wget` command in a bash terminal to download dataset file from an FTP server. The basic syntax is:
 
 ```bash
 wget https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz
 ```
 
-Anotation tool can be found here https://pcingola.github.io/SnpEff/download/
+SnpEff is a program that annotates and predicts the effects of genetic variants on genes. The installation process for SnpEff will vary depending on the operating system you are using. Here are the general steps for installing SnpEff on different OS:
+
+* Windows:
+Download the SnpEff executable file from the SnpEff website.
+Open the downloaded file and follow the prompts to install the program.
+
+* Mac OS X:
+Download the SnpEff executable file from the SnpEff website.
+Open the downloaded file and follow the prompts to install the program.
+
+* Linux:
+Download the SnpEff executable file from the SnpEff website.
+Open a terminal window and navigate to the directory where the downloaded file is located.
+Use the command "chmod +x" to make the file executable
+Run the file with "./"
 
 ```bash
 wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
 ```
+
 
 ## Team
 
