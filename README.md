@@ -68,6 +68,12 @@ There are several potential benefits of an aging app for health status. Some exa
 
 Overall, an aging app can be a useful tool for older adults to manage their health, stay informed and connected, and potentially improve overall health outcomes.
 
+## Application overview
+
+![main_page](media/main_page.png "Main page")
+
+![medical_records](media/medical_records.png "Medical records")
+
 ## Install the app
 
 ### Start back-end (FastAPI)
@@ -163,6 +169,14 @@ wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
 ```
 
+### Analysing dataset
+
+
+```bash
+sudo apt-get install tabix
+gunzip -k 
+java -Xmx8G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz gh3665.vcf > output.vcf
+```
 
 ## Team
 
