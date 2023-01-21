@@ -184,6 +184,22 @@ gunzip ${SAMPLE}.ann.vcf
 java -Xmx${MEM}G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz ${SAMPLE}.ann.vcf.gz > ${SAMPLE}.ann.clinvar.vcf
 gunzip ${SAMPLE}.ann.clinvar.vcf
 
+To install bcftools, you will first need to have the appropriate dependencies installed, including a C compiler (such as GCC) and zlib library. Once those dependencies are met, you can download the source code for bcftools from the official website (http://www.htslib.org/) and then follow these steps:
+
+* Unpack the bcftools tarball using the command: tar -xzf bcftools-version.tar.gz
+* Change into the bcftools directory: cd bcftools-version
+* Run the configure script: ./configure
+* Compile and install bcftools: make && make install
+
+Alternatively, you can also use package manager like apt-get, yum, Homebrew, etc to install bcftools,
+* Ubuntu: apt-get install bcftools
+* CentOS: yum install bcftools
+* MacOS: brew install bcftools
+
+You can also make use of conda-forge channel to install bcftools.
+Note that you may need to use "sudo" before the commands if you are installing on a system-wide level and don't have the appropriate permissions.
+
+
 ### Analysing dataset
 
 
