@@ -179,11 +179,14 @@ export SAMPLE="gh3665"
 export HG="hg19"
 export MEM="8"
 # prepare the file
-java -jar snpEff/snpEff.jar ann -v hg19 ${SAMPLE}.vcf.gz > ${SAMPLE}.ann.vcf
-gunzip ${SAMPLE}.ann.vcf
+java -jar snpEff/snpEff.jar ann -v hg19 ${SAMPLE}.vcf.gz | bgzip > ${SAMPLE}.ann.vcf.gz; tabix ${SAMPLE}.ann.vcf.gz
+
 # annotate by ClinVar database
-java -Xmx${MEM}G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz ${SAMPLE}.ann.vcf.gz > ${SAMPLE}.ann.clinvar.vcf
-gunzip ${SAMPLE}.ann.clinvar.vcf
+java -Xmx${MEM}G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz ${SAMPLE}.ann.vcf.gz | bgzip > ${SAMPLE}.ann.clinvar.vcf.gz; tabix ${SAMPLE}.ann.clinvar.vcf.gz
+
+# Extrart disease and pathogeniciti status
+bcftools view ${SAMPLE}.ann.clinvar.vcf.gz | grep -v "##" | grep "CLN" | perl -lane 'print join "\t",(@F[0..4], /(?:CLNSIG|CLNDN)=[^;]+/g)' > ${SAMPLE}.processed.clinvar.txt 
+
 
 To install bcftools, you will first need to have the appropriate dependencies installed, including a C compiler (such as GCC) and zlib library. Once those dependencies are met, you can download the source code for bcftools from the official website (http://www.htslib.org/) and then follow these steps:
 
