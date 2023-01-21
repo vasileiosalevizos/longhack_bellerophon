@@ -172,6 +172,17 @@ Run the file with "./"
 wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
 ```
+## Start annotating data 
+
+export SAMPLE="gh3665"
+export HG="hg19"
+export MEM="8"
+# prepare the file
+java -jar snpEff/snpEff.jar ann -v hg19 ${SAMPLE}.vcf.gz > ${SAMPLE}.ann.vcf
+gunzip ${SAMPLE}.ann.vcf
+# annotate by ClinVar database
+java -Xmx${MEM}G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz ${SAMPLE}.ann.vcf.gz > ${SAMPLE}.ann.clinvar.vcf
+gunzip ${SAMPLE}.ann.clinvar.vcf
 
 ### Analysing dataset
 
