@@ -8,10 +8,10 @@ https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
 
 * <strike> Back-end API template with FastAPI </strike>
 * Create React App
-  * Add build instructions
-  * Add home screen
-  * Add screenshots
-  * Add multi-media
+  * <strike> Add build instructions </strike>
+  * <strike> Add home screen </strike>
+  * <strike> Add screenshots </strike>
+  * <strike> Add multi-media </strike>
 * Build wireframe components
 * Create machine learning model
 
@@ -68,6 +68,13 @@ There are several potential benefits of an aging app for health status. Some exa
 
 Overall, an aging app can be a useful tool for older adults to manage their health, stay informed and connected, and potentially improve overall health outcomes.
 
+## Application overview
+
+<img src="media/main_page.png" alt="main page" width="200"/>
+
+<img src="media/medical_records.png" alt="medical records" width="200"/>
+
+
 ## Install the app
 
 ### Start back-end (FastAPI)
@@ -114,6 +121,113 @@ Update the image and then run the tests.
 ```bash
 docker-compose up -d --build
 docker-compose exec web pytest .
+```
+
+### React front-end build
+
+
+```bash
+cd src/frontend/
+```
+
+```bash
+npm install
+```
+
+```bash
+npm start
+```
+Go to local: http://localhost:3000 or on your network:  http://172.16.5.4:3000
+
+Test runner
+
+```bash
+npm run build
+```
+
+## Anotation tool and genomic dataset
+
+You can use the `wget` command in a bash terminal to download dataset file from an FTP server. The basic syntax is:
+
+```bash
+wget https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz
+```
+
+SnpEff is a program that annotates and predicts the effects of genetic variants on genes. The installation process for SnpEff will vary depending on the operating system you are using. Here are the general steps for installing SnpEff on different OS:
+
+* Windows:
+Download the SnpEff executable file from the SnpEff website.
+Open the downloaded file and follow the prompts to install the program.
+
+* Mac OS X:
+Download the SnpEff executable file from the SnpEff website.
+Open the downloaded file and follow the prompts to install the program.
+
+* Linux:
+Download the SnpEff executable file from the SnpEff website.
+Open a terminal window and navigate to the directory where the downloaded file is located.
+Use the command "chmod +x" to make the file executable
+Run the file with "./"
+
+```bash
+wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+unzip snpEff_latest_core.zip
+```
+## Start annotating data 
+
+export SAMPLE="gh3665"
+export HG="hg19"
+export MEM="8"
+# prepare the file
+java -jar snpEff/snpEff.jar ann -v hg19 ${SAMPLE}.vcf.gz | bgzip > ${SAMPLE}.ann.vcf.gz; tabix ${SAMPLE}.ann.vcf.gz
+
+# annotate by ClinVar database
+java -Xmx${MEM}G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz ${SAMPLE}.ann.vcf.gz | bgzip > ${SAMPLE}.ann.clinvar.vcf.gz; tabix ${SAMPLE}.ann.clinvar.vcf.gz
+
+# Extrart disease and pathogeniciti status
+bcftools view ${SAMPLE}.ann.clinvar.vcf.gz | grep -v "##" | grep "CLN" | perl -lane 'print join "\t",(@F[0..4], /(?:CLNSIG|CLNDN)=[^;]+/g)' > ${SAMPLE}.processed.clinvar.txt 
+
+
+To install bcftools, you will first need to have the appropriate dependencies installed, including a C compiler (such as GCC) and zlib library. Once those dependencies are met, you can download the source code for bcftools from the official website (http://www.htslib.org/) and then follow these steps:
+
+* Unpack the bcftools tarball using the command: `tar -xzf bcftools-version.tar.gz`
+* Change into the bcftools directory: `cd bcftools-version`
+* Run the configure script: `./configure`
+* Compile and install bcftools: `make && make install`
+
+Alternatively, you can also use package manager like apt-get, yum, Homebrew, etc to install bcftools,
+* Ubuntu: `apt-get install bcftools`
+* CentOS: `yum install bcftools`
+* MacOS: `brew install bcftools`
+
+You can also make use of conda-forge channel to install bcftools.
+Note that you may need to use "sudo" before the commands if you are installing on a system-wide level and don't have the appropriate permissions.
+
+
+To install vcftools, you will first need to have the appropriate dependencies installed, including a C compiler (such as GCC) and zlib library. Once those dependencies are met, you can download the source code for vcftools from the official website (https://vcftools.github.io/downloads.html) and then follow these steps:
+
+* Unpack the vcftools tarball using the command: `tar -xzf vcftools-version.tar.gz`
+* Change into the vcftools directory: `cd vcftools-version`
+* Run the configure script: `./configure`
+Compile and install vcftools: `make && make install`
+
+Alternatively, you can also use package manager like apt-get, yum, Homebrew, etc to install vcftools, Example:
+
+Ubuntu: `apt-get install vcftools`
+CentOS: `yum install vcftools`
+MacOS: `brew install vcftools`
+
+You can also make use of conda-forge channel to install vcftools.
+Please note that you may need to use "sudo" before the commands if you are installing on a system-wide level and don't have the appropriate permissions.
+Also, vcftools required a few more dependencies like ncurses and libbz2-dev (ubuntu) or bzip2-devel (CentOS) to be installed before the compilation.
+
+### Analysing dataset
+
+
+```bash
+sudo apt-get install tabix
+gunzip -k 
+java -Xmx8G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz gh3665.vcf > output.vcf
 ```
 
 ## Team
