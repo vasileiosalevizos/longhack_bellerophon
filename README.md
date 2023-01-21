@@ -124,15 +124,19 @@ docker-compose exec web pytest .
 
 ### React front-end build
 
-Go to `src/frontend/`
 
-```npm start
+```bash
+cd src/frontend/
+```
+
+```bash
 npm install
 ```
 
 ```bash
 npm start
 ```
+Go to local: http://localhost:3000 or on your network:  http://172.16.5.4:3000
 
 Test runner
 
