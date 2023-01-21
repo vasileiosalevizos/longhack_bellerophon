@@ -22,6 +22,7 @@ const Meeter = () => {
           sx={{
             display: { md: "flex", xs: "none" },
             alignItems: "center",
+            ml:"130px",
             flexDirection: { md: "row", xs: "column" },
           }}
         >
@@ -106,7 +107,7 @@ const Meeter = () => {
                 fontWeight: "600",
               }}
             >
-              Mental Status
+            Physical Status
             </Typography>
           </Grid>
         </Grid>
@@ -127,7 +128,7 @@ const Meeter = () => {
                 fontWeight: "600",
               }}
             >
-              Mental Status
+             Diabetes Status
             </Typography>
           </Grid>
         </Grid>

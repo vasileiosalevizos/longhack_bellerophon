@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BottomMenu, Header } from "../../Component";
 
 import HomeIcon from "@mui/icons-material/Home";
@@ -16,16 +16,31 @@ import { TabMenu, Accordion } from "../../Component";
 import profile from "../../assets/profile.png";
 
 const Meter = () => {
+  const [file, setFile] = useState();
+  const inputRef = useRef();
+
+  const handleUploadClick = () => {
+    // 👇 We redirect the click event onto the hidden input element
+    inputRef.current?.click();
+  };
+  const handleFileChange = (e) => {
+    if (!e.target.files) {
+      return;
+    }
+    setFile(e.target.files[0]);
+
+    // 🚩 do the file upload here normally...
+  };
+
   return (
     <Grid
       container
       height="100vh"
       // pb="100px"
       backgroundColor="#ffe6e6"
-     
       sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
-      <Grid item md={12}  height="100vh">
+      <Grid item md={12} height="100vh">
         <Header />
         <Grid item md={12} sx={{ display: "flex", justifyContent: "center" }}>
           <TabMenu />
@@ -80,9 +95,31 @@ const Meter = () => {
               Drag and Drop
               <br /> Or
               <br />
-              Browser
+              <div>
+                {/* <div>Upload a file:</div> */}
+
+                {/* 👇 Our custom button to select and upload a file */}
+                <button
+                  style={{
+                    fontSize: "27px",
+                    border: "none",
+                    backgroundColor: "transparent",
+                  }}
+                  onClick={handleUploadClick}
+                >
+                  {file ? `${file.name}` : "Browser"}
+                </button>
+                <input
+                  type="file"
+                  ref={inputRef}
+                  onChange={handleFileChange}
+                  style={{ display: "none" }}
+                />
+              </div>
+              {/* Browser */}
             </Typography>{" "}
           </Box>
+
           <Grid item md={12} mt="30px">
             <Button
               sx={{
@@ -98,7 +135,8 @@ const Meter = () => {
             </Button>
           </Grid>
         </Grid>
-          <Grid
+
+        <Grid
           item
           md={12}
           sx={{
@@ -107,7 +145,7 @@ const Meter = () => {
             justifyContent: "center",
           }}
         >
-          <BottomMenu  home />
+          <BottomMenu home />
         </Grid>
       </Grid>
     </Grid>

@@ -14,9 +14,19 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Home", "Medical", "FileTransfer", "Meeter"];
+const navItems = [
+  { name: "Home", path: "/" },
+  { name: "Medical", path: "/Medical" },
+  { name: "FileTransfer", path: "/TransferFile" },
+  { name: "Meter", path: "/Meter" },
+
+  // "Medical",
+  // "FileTransfer",
+  // "Meeter",
+];
 
 export const Header = (props) => {
   const { window } = props;
@@ -36,7 +46,7 @@ export const Header = (props) => {
         {navItems.map((item) => (
           <ListItem key={item} disablePadding>
             <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
+              <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -48,10 +58,10 @@ export const Header = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{display: {md:"flex",xs:'none'} }}>
+    <Box sx={{ display: { md: "flex", xs: "none" } }}>
       <CssBaseline />
       <AppBar component="nav">
-        <Toolbar sx={{backgroundColor:"#ffe6e6",color:"black"}}>
+        <Toolbar sx={{ backgroundColor: "#ffe6e6", color: "black" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -74,9 +84,14 @@ export const Header = (props) => {
           </Typography>
           <Box sx={{ pr: "60px", display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{color:"black",}}>
-                {item}
-              </Button>
+              <Link
+                to={item.path}
+                style={{  textDecoration: "none" }}
+              >
+                <Button key={item.name} sx={{textTransform: "capitalize",fontSize:"18px",marginRight:"10px", color: "black" }}>
+                  {item.name}
+                </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
@@ -107,4 +122,3 @@ export const Header = (props) => {
     </Box>
   );
 };
-
