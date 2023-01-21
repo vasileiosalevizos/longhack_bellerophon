@@ -70,9 +70,10 @@ Overall, an aging app can be a useful tool for older adults to manage their heal
 
 ## Application overview
 
-![main_page](media/main_page.png "Main page")
+<img src="media/main_page.png" alt="main page" width="200"/>
 
-![medical_records](media/medical_records.png "Medical records")
+<img src="media/medical_records.png" alt="medical records" width="200"/>
+
 
 ## Install the app
 
