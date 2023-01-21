@@ -10,7 +10,7 @@ https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
 * Create React App
   * <strike> Add build instructions </strike>
   * <strike> Add home screen </strike>
-  * Add screenshots 
+  * <strike> Add screenshots </strike>
   * <strike> Add multi-media </strike>
 * Build wireframe components
 * Create machine learning model
@@ -133,6 +133,16 @@ Test runner
 ```bash
 npm run build
 ```
+
+## Anotation tool and genomic dataset
+
+Dataset download:
+
+```bash
+wget https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz
+```
+
+Anotation tool can be found here https://pcingola.github.io/SnpEff/download/
 
 ## Team
 
