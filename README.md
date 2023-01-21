@@ -144,6 +144,11 @@ wget https://ftp.ncbi.nlm.nih.gov/pub/clinvar/vcf_GRCh37/clinvar.vcf.gz
 
 Anotation tool can be found here https://pcingola.github.io/SnpEff/download/
 
+```bash
+wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
+unzip snpEff_latest_core.zip
+```
+
 ## Team
 
 * Vasileios Alevizos
