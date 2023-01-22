@@ -1,23 +1,20 @@
 # Longhack team Bellerophon
 
-## Wireframes
+_The aging population is a growing trend in many parts of the world. This is due to a combination of factors, including advancements in medical technology and healthcare, which have led to increased life expectancy, and declining fertility rates, which have led to fewer births. As a result, there are now more older adults than ever before, and this demographic shift is having a significant impact on society, including healthcare, social security, and economic growth. Additionally, The World Health Organization (WHO) has declared that the older population is more vulnerable to chronic diseases such as heart disease, stroke, cancer, diabetes, and depression. Bellerophon is a web app and mobile application that calculates aging could be used to determine a person's age based on their birthdate. The user would enter their birthdate, and the app would calculate their current age and display it in years, months, and days. The app could also display the user's age in other units of time, such as hours or seconds. Additionally, the app could include features such as the ability to display a person's age on a specific date in the future, or to compare the ages of two people._
 
-https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
+## Table of Contents
 
-## Next steps
+- [Content](#Content)
+    - [Background](#Background)
+    - [Data](#data)
+    - [Usage](#usage)
+        - [Installation](#installation)
+        - [Requirements](#requirements)
+    - [Results](#results)
+    - [Team Members](#team-members)
 
-* <strike> Back-end API template with FastAPI </strike>
-* Create React App
-  * <strike> Add build instructions </strike>
-  * <strike> Add home screen </strike>
-  * <strike> Add screenshots </strike>
-  * <strike> Add multi-media </strike>
-* Build wireframe components
-* Create machine learning model
 
-## About
-
-The aging population is a growing trend in many parts of the world. This is due to a combination of factors, including advancements in medical technology and healthcare, which have led to increased life expectancy, and declining fertility rates, which have led to fewer births. As a result, there are now more older adults than ever before, and this demographic shift is having a significant impact on society, including healthcare, social security, and economic growth. Additionally, The World Health Organization (WHO) has declared that the older population is more vulnerable to chronic diseases such as heart disease, stroke, cancer, diabetes, and depression.
+## Background
 
 There are several causes of the aging population trend:
 
@@ -51,7 +48,6 @@ The aging population can lead to a number of problems for individuals and societ
 
 These are just a few examples of the problems that can arise with an aging population. It is important for society to take proactive measures to address these issues, such as developing policies and programs to support older adults, investing in healthcare and social security systems, and promoting healthy aging.
 
-
 There are several potential benefits of an aging app for health status. Some examples include:
 
 1. Tracking: An aging app can allow users to track important health information such as their weight, blood pressure, and heart rate. This can be helpful for monitoring changes over time and identifying potential health issues.
@@ -67,6 +63,25 @@ There are several potential benefits of an aging app for health status. Some exa
 6. Remote Monitoring: An aging app can also allow doctors to monitor their patients' health remotely which can be beneficial for older adults who may have difficulty traveling to the doctor's office.
 
 Overall, an aging app can be a useful tool for older adults to manage their health, stay informed and connected, and potentially improve overall health outcomes.
+
+## Wireframes
+
+https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
+
+## Next steps
+
+* <strike> Back-end API template with FastAPI </strike>
+* Create React App
+  * <strike> Add build instructions </strike>
+  * <strike> Add home screen </strike>
+  * <strike> Add screenshots </strike>
+  * <strike> Add multi-media </strike>
+* Build wireframe components
+* Create machine learning model
+
+
+
+
 
 ## Application overview
 
