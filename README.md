@@ -1,6 +1,6 @@
 # Longhack team Bellerophon
 
-_The aging population is a growing trend in many parts of the world. This is due to a combination of factors, including advancements in medical technology and healthcare, which have led to increased life expectancy, and declining fertility rates, which have led to fewer births. As a result, there are now more older adults than ever before, and this demographic shift is having a significant impact on society, including healthcare, social security, and economic growth. Additionally, The World Health Organization (WHO) has declared that the older population is more vulnerable to chronic diseases such as heart disease, stroke, cancer, diabetes, and depression. Bellerophon is a web app and mobile application that calculates aging could be used to determine a person's age based on their birthdate. The user would enter their birthdate, and the app would calculate their current age and display it in years, months, and days. The app could also display the user's age in other units of time, such as hours or seconds. Additionally, the app could include features such as the ability to display a person's age on a specific date in the future, or to compare the ages of two people._
+_The ageing population analysis is a growing trend in many parts of the world. This is due to a combination of factors, including advancements in medical technology and healthcare, which have led to increased life expectancy, and declining fertility rates, which have led to fewer births. As a result, there are now more older adults than ever before, and this demographic shift is having a significant impact on society, including healthcare, social security, and economic growth. Additionally, The World Health Organization (WHO) has declared that the older population is more vulnerable to chronic diseases such as heart disease, stroke, cancer, diabetes, and depression. Bellerophon is a web app and mobile application that calculates aging could be used to determine a person's age based on their birthdate. The user would enter their birthdate, and the app would calculate their current age and display it in years, months, and days. The app could also display the user's age in other units of time, such as hours or seconds. Additionally, the app could include features such as the ability to display a person's age on a specific date in the future, or to compare the ages of two people._
 
 ## Table of Contents
 
@@ -243,6 +243,40 @@ sudo apt-get install tabix
 gunzip -k 
 java -Xmx8G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz gh3665.vcf > output.vcf
 ```
+
+#### Install IPFS for file storing in blockchain
+
+Here are the steps to install and start an IPFS daemon on a Linux machine using Bash (for unix based OS):
+
+1. Install IPFS by running the following command: `curl https://dist.ipfs.io/go-ipfs/v0.7.0/go-ipfs_v0.7.0_linux-amd64.tar.gz --output go-ipfs.tar.gz`
+2. Extract the files from the archive: `tar xvfz go-ipfs.tar.gz`
+3. Move the binary to a directory in your PATH: `sudo mv go-ipfs/ipfs /usr/local/bin/`
+4. Initialize IPFS and create a new repository: `ipfs init`
+
+```sh
+generating ED25519 keypair...done
+peer identity: 12D3KooWPGVSyMaSfoH7NGopakPdrW6DxhjjrYAv6TXvyQki5ekE
+initializing IPFS node at /home/codespace/.ipfs
+to get started, enter:
+
+        ipfs cat /ipfs/QmQPeNsJPyVWPFDVHb77w8G42Fvo15z4bG2X8D2GhfbSXc/readme
+```
+5. Start the IPFS daemon: `ipfs daemon`
+
+```sh
+Initializing daemon...
+go-ipfs version: 0.7.0
+Repo version: 10
+System version: amd64/linux
+Golang version: go1.14.4
+Swarm listening on /ip4/127.0.0.1/tcp/4001
+...
+```
+
+`Note: Use IPFS 0.4.23 ≤ … < 0.8.0`
+
+Please note that the IPFS daemon will run in the background and continue running even after you close your terminal, you can stop the daemon by running `ipfs shutdown`.
+
 
 ## Team Members
 
