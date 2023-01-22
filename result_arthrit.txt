@@ -1,54 +1,17 @@
-rs1005753	association
-rs11203366	association
-rs2240340	association
-rs28936375	Pathogenic
-rs794727994	Conflicting_interpretations_of_pathogenicity
-rs794727995	Pathogenic
-rs794727993	Pathogenic
-rs864309710	Pathogenic
-rs77245812	Benign
-rs288326	risk_factor
-rs116040763	Conflicting_interpretations_of_pathogenicity
-rs2071592	risk_factor
-rs909253	risk_factor
-rs1800629	drug_response
-rs1800795	risk_factor
-rs3764147	Benign
-rs730880295	Pathogenic/Likely_pathogenic
-rs17293632	Benign
-rs1057518977	Conflicting_interpretations_of_pathogenicity
-rs1065080	Benign
-rs387906854	Uncertain_significance
-rs587782977	Likely_pathogenic
-rs587776881	Pathogenic
-rs387906853	Likely_pathogenic
-rs587776880	Pathogenic
-rs387906851	Pathogenic
-rs387906855	Conflicting_interpretations_of_pathogenicity
-rs387906852	Pathogenic
-rs387906850	Pathogenic
-rs730880214	Pathogenic/Likely_pathogenic
-rs117185005	Benign/Likely_benign
-rs387906856	Pathogenic
-hg19-chr15-67482864-G-A	Conflicting_interpretations_of_pathogenicity
-rs79438763	Benign
-rs201872851	Benign/Likely_benign
-rs77026017	Benign/Likely_benign
-rs886041107	Uncertain_significance
-rs139362350	Benign/Likely_benign
-rs121908130	Pathogenic
-rs28939089	Pathogenic/Likely_pathogenic
-rs11858480	Benign
-rs200771233	Benign/Likely_benign
-rs142544259	Uncertain_significance
-rs201253322	Conflicting_interpretations_of_pathogenicity
-rs16942341	Benign
-rs3743398	Benign
-rs938608	Benign
-rs1042630	Benign
-rs104895438	Conflicting_interpretations_of_pathogenicity
-rs61747625	Conflicting_interpretations_of_pathogenicity
-rs2066845	Conflicting_interpretations_of_pathogenicity|association
-rs140309319	Uncertain_significance
-rs11651270	Benign
-rs143383	Benign
+rs11203366	association	0.56122
+rs2240340	association	0.56192
+rs28936375	Pathogenic	0.00017
+rs77245812	Benign	0.01614
+rs288326	risk_factor	0.08189
+rs116040763	Conflicting_interpretations_of_pathogenicity	7e-05
+rs1800629	drug_response	0.16159
+rs1065080	Benign	0.86352
+rs117185005	Benign/Likely_benign	0.01646
+rs201872851	Benign/Likely_benign	0.00408
+rs77026017	Benign/Likely_benign	0.00096
+rs11858480	Benign	0.04955
+rs200771233	Benign/Likely_benign	0.00119
+rs142544259	Uncertain_significance	4e-05
+rs201253322	Conflicting_interpretations_of_pathogenicity	0.00047
+rs61747625	Conflicting_interpretations_of_pathogenicity	0.00232
+rs11651270	Benign	0.45485

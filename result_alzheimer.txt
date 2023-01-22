@@ -1,41 +1,25 @@
-rs11405	Benign
-rs63750048	Pathogenic
-rs63749851	Pathogenic/Likely_pathogenic
-rs28936380	Pathogenic
-rs63750197	Benign/Likely_benign
-rs63750215	Pathogenic
-rs61730652	Benign/Likely_benign
-rs28936379	Pathogenic
-rs63749884	Pathogenic
-rs147702142	Benign/Likely_benign
-rs142690225	Uncertain_significance
-rs63750666	Uncertain_significance
-rs63750110	Uncertain_significance
-rs151048692	Uncertain_significance
-rs1049296	Benign
-rs1799945	Conflicting_interpretations_of_pathogenicity|other
-rs1800730	Conflicting_interpretations_of_pathogenicity
-rs146519482	Uncertain_significance
-rs1800562	Conflicting_interpretations_of_pathogenicity|other|risk_factor
-rs1800630	protective
-rs1799724	risk_factor
-rs33949390	Conflicting_interpretations_of_pathogenicity
-rs63749824	Pathogenic
-rs63750900	Pathogenic
-rs17125721	Benign/Likely_benign
-rs121917809	Conflicting_interpretations_of_pathogenicity
-rs63750687	Pathogenic
-rs661	Pathogenic
-rs362384	Benign/Likely_benign
-rs7523	Benign
-rs362344	Benign
-rs119468010	Pathogenic/Likely_pathogenic
-rs145999145	Likely_benign
-rs769452	Conflicting_interpretations_of_pathogenicity
-rs267606664	Uncertain_significance
-rs267606661	Uncertain_significance
-rs1799990	Benign/Likely_benign
-rs63750066	Conflicting_interpretations_of_pathogenicity
-rs63750363	Uncertain_significance
-rs140304729	Benign/Likely_benign
-rs141331202	Uncertain_significance
+rs11405	Benign	0.76035
+rs63750048	Pathogenic	1e-05
+rs63750197	Benign/Likely_benign	0.00064
+rs61730652	Benign/Likely_benign	0.01298
+rs142690225	Uncertain_significance	0.00013
+rs63750666	Uncertain_significance	3e-05
+rs63750110	Uncertain_significance	4e-05
+rs1049296	Benign	0.16016
+rs1799945	Conflicting_interpretations_of_pathogenicity|other	0.1066
+rs1800730	Conflicting_interpretations_of_pathogenicity	0.01009
+rs146519482	Uncertain_significance	0.00039
+rs1800562	Conflicting_interpretations_of_pathogenicity|other|risk_factor	0.03243
+rs63749824	Pathogenic	1e-05
+rs63750900	Pathogenic	1e-05
+rs17125721	Benign/Likely_benign	0.0153
+rs121917809	Conflicting_interpretations_of_pathogenicity	0.00012
+rs119468010	Pathogenic/Likely_pathogenic	0.00155
+rs145999145	Likely_benign	0.00308
+rs769452	Conflicting_interpretations_of_pathogenicity	0.00242
+rs267606664	Uncertain_significance	0.00038
+rs1799990	Benign/Likely_benign	0.30778
+rs63750066	Conflicting_interpretations_of_pathogenicity	6e-05
+rs63750363	Uncertain_significance	1e-05
+rs140304729	Benign/Likely_benign	0.00129
+rs141331202	Uncertain_significance	3e-05

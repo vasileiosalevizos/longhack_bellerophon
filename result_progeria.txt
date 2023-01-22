@@ -1,3 +1,0 @@
-rs60652225	Pathogenic
-rs60310264	Pathogenic
-rs797044487	Pathogenic
