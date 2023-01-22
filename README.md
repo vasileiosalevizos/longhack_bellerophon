@@ -277,6 +277,13 @@ Swarm listening on /ip4/127.0.0.1/tcp/4001
 
 Please note that the IPFS daemon will run in the background and continue running even after you close your terminal, you can stop the daemon by running `ipfs shutdown`.
 
+```python
+import ipfshttpclient
+client = ipfshttpclient.connect()  # Connects to: /dns/localhost/tcp/5001/http
+res = client.add('input.txt')
+# res {'Hash': 'QmWxS5aNTFEc9XbMX1ASvLET1zrqEaTssqt33rVZQCQb22', 'Name': 'test.txt'}
+client.cat(res['Hash']) # 'content\n'
+```
 
 ## Team Members
 
