@@ -2,6 +2,8 @@
 
 _The ageing population analysis is a growing trend in many parts of the world. This is due to a combination of factors, including advancements in medical technology and healthcare, which have led to increased life expectancy, and declining fertility rates, which have led to fewer births. As a result, there are now more older adults than ever before, and this demographic shift is having a significant impact on society, including healthcare, social security, and economic growth. Additionally, The World Health Organization (WHO) has declared that the older population is more vulnerable to chronic diseases such as heart disease, stroke, cancer, diabetes, and depression. Bellerophon is a web app and mobile application that calculates aging could be used to determine a person's age based on their birthdate. The user would enter their birthdate, and the app would calculate their current age and display it in years, months, and days. The app could also display the user's age in other units of time, such as hours or seconds. Additionally, the app could include features such as the ability to display a person's age on a specific date in the future, or to compare the ages of two people._
 
+<img src="media/Diagram.png" alt="Overview" width="400"/>
+
 ## Table of Contents
 
 - [Content](#Content)
