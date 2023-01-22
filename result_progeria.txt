@@ -1,0 +1,3 @@
+chr1	156100470	rs60652225	T	G	Hutchinson-Gilford_progeria_syndrome,_childhood-onset|not_provided	Pathogenic	progeria
+chr1	156100484	rs60310264	G	A	Hutchinson-Gilford_syndrome|Hutchinson-Gilford_progeria_syndrome,_atypical|not_provided	Pathogenic	progeria
+chr1	156108548	rs797044487	G	A	Hutchinson-Gilford_syndrome|Hutchinson-Gilford_progeria_syndrome,_atypical	Pathogenic	progeria
