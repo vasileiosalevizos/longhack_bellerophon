@@ -123,6 +123,14 @@ docker-compose up -d --build
 docker-compose exec web pytest .
 ```
 
+#### API calls
+
+| API call | Destination |
+| ---------|------------|
+| Ping | http://localhost:8002/ping |
+| Swagger board | http://localhost:8002/docs |
+| Post data | http://localhost:8002/notes |
+
 ### React front-end build
 
 
