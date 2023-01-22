@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { Grid, Typography } from "@mui/material";
-import { Box } from "@mui/system";
 import AcUnitIcon from "@mui/icons-material/AcUnit";
 import HomeIcon from "@mui/icons-material/Home";
 import NoteAddIcon from "@mui/icons-material/NoteAdd";
 import PlagiarismIcon from "@mui/icons-material/Plagiarism";
 import { Link } from "react-router-dom";
-const bottomMenu = ({ home, record, id, summary }) => {
+import UploadFileIcon from "@mui/icons-material/UploadFile";
+const bottomMenu = ({ File, home, record, id, summary }) => {
   return (
     <Grid
       container
@@ -19,15 +19,29 @@ const bottomMenu = ({ home, record, id, summary }) => {
       {" "}
       {home ? (
         <Grid item xs={3} align="center">
-          <Link style={{textDecoration:"none",color:"black"}} to="/">
+          <Link style={{ textDecoration: "none", color: "black" }} to="/">
             <HomeIcon />
             <Typography>Home</Typography>
           </Link>
         </Grid>
       ) : null}
+      {File ? (
+        <Grid item xs={3} align="center">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/TransferFile"
+          >
+            <PlagiarismIcon />
+            <Typography>File Transfer</Typography>
+          </Link>
+        </Grid>
+      ) : null}
       {record ? (
         <Grid item xs={3} align="center">
-          <Link style={{textDecoration:"none",color:"black"}} to="/Medical">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/Medical"
+          >
             <NoteAddIcon />
             <Typography>Medical Records</Typography>
           </Link>
@@ -35,7 +49,10 @@ const bottomMenu = ({ home, record, id, summary }) => {
       ) : null}
       {id ? (
         <Grid item xs={3} align="center">
-          <Link style={{textDecoration:"none",color:"black"}} to="/TransferFile">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to=""
+          >
             <AcUnitIcon />
             <Typography>Medical ID</Typography>
           </Link>
@@ -43,7 +60,7 @@ const bottomMenu = ({ home, record, id, summary }) => {
       ) : null}
       {summary ? (
         <Grid item xs={3} align="center">
-          <Link style={{textDecoration:"none",color:"black"}}  to="/Meter">
+          <Link style={{ textDecoration: "none", color: "black" }} to="/Meter">
             <PlagiarismIcon />
             <Typography>Summary</Typography>
           </Link>

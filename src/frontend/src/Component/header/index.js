@@ -85,6 +85,7 @@ export const Header = (props) => {
           <Box sx={{ pr: "60px", display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link
+              key={item}
                 to={item.path}
                 style={{  textDecoration: "none" }}
               >

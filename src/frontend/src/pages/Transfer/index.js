@@ -1,25 +1,23 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect,  useState } from "react";
 import { BottomMenu, Header } from "../../Component";
 
-import profile from "../../assets/profile.png";
 import {
   Grid,
   Box,
   Typography,
-  TextField,
-  IconButton,
+
   Button,
 } from "@mui/material";
-import { TabMenu, Accordion } from "../../Component";
+import { TabMenu } from "../../Component";
 
-const TransferFile = () => {
+const Transfer = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [imageUrl, setImageUrl] = useState(null);
   // const [imageUrl, setImageUrl] = useState(null);
 
   // const inputRef = useRef();
 
-  console.log("files", selectedImage.name);
+  // console.log("files", selectedImage.name);
 
   // fetchapi
   const api = async () => {
@@ -45,22 +43,21 @@ const TransferFile = () => {
       localStorage.setItem("imge", imageUrl);
       localStorage.setItem("name", selectedImage.name);
     }
-    // localStorage.removeItem("imge");
     api();
   });
   // const handleUploadClick = () => {
   //   // 👇 We redirect the click event onto the hidden input element
   //   inputRef.current?.click();
   // };
-  const handleFileChange = (e) => {
-    if (!e.target.files) {
-      return;
-    }
-    // setSelectedImage(e.target.files[0]);
-    imageUrl(e.target.files[0]);
-    localStorage.setItem("img", imageUrl);
-    // 🚩 do the file upload here normally...
-  };
+  // const handleFileChange = (e) => {
+  //   if (!e.target.files) {
+  //     return;
+  //   }
+  //   // setSelectedImage(e.target.files[0]);
+  //   imageUrl(e.target.files[0]);
+  //   localStorage.setItem("img", imageUrl);
+  //   // 🚩 do the file upload here normally...
+  // };
 
   return (
     <Grid
@@ -195,4 +192,4 @@ const TransferFile = () => {
   );
 };
 
-export default TransferFile;
+export default Transfer;

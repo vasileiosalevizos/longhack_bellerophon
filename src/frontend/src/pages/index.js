@@ -1,6 +1,6 @@
 import Home from "./home";
 import Medical from "./medical";
 import Meter from "./metter";
-import TransferFile from "./transferFile";
+import FileTransfer from "./Transfer";
 
-export { Home, Medical, Meter ,TransferFile};
+export { Home, Medical, Meter ,FileTransfer};
