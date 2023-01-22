@@ -6,11 +6,10 @@ _The aging population is a growing trend in many parts of the world. This is due
 
 - [Content](#Content)
     - [Background](#Background)
-    - [Data](#data)
+    - [Application overview](#Application-overview)
+      - [Wireframes](#Wireframes)
     - [Usage](#usage)
         - [Installation](#installation)
-        - [Requirements](#requirements)
-    - [Results](#results)
     - [Team Members](#team-members)
 
 
@@ -64,24 +63,6 @@ There are several potential benefits of an aging app for health status. Some exa
 
 Overall, an aging app can be a useful tool for older adults to manage their health, stay informed and connected, and potentially improve overall health outcomes.
 
-## Wireframes
-
-https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
-
-## Next steps
-
-* <strike> Back-end API template with FastAPI </strike>
-* Create React App
-  * <strike> Add build instructions </strike>
-  * <strike> Add home screen </strike>
-  * <strike> Add screenshots </strike>
-  * <strike> Add multi-media </strike>
-* Build wireframe components
-* Create machine learning model
-
-
-
-
 
 ## Application overview
 
@@ -89,10 +70,17 @@ https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
 
 <img src="media/medical_records.png" alt="medical records" width="200"/>
 
+### Wireframes
 
-## Install the app
+https://miro.com/app/board/uXjVPxwb4gQ=/?share_link_id=870121347472
 
-### Start back-end (FastAPI)
+
+
+## Usage
+
+### Installation
+
+#### Start back-end (FastAPI)
 
 In order to run the build command for a project that uses Docker and Docker Compose, you must have both Docker and Docker Compose installed on your system. Docker is a platform for running containerized applications, and Docker Compose is a tool for defining and running multi-container Docker applications. Together, these tools allow you to build, run, and manage your application and its dependencies in a standardized and efficient way.
 
@@ -146,8 +134,10 @@ docker-compose exec web pytest .
 | Swagger board | http://localhost:8002/docs |
 | Post data | http://localhost:8002/notes |
 
-### React front-end build
+#### Front-end build (with react)
 
+
+Start front end:
 
 ```bash
 cd src/frontend/
@@ -168,7 +158,7 @@ Test runner
 npm run build
 ```
 
-## Anotation tool and genomic dataset
+#### Anotation tool and genomic dataset
 
 You can use the `wget` command in a bash terminal to download dataset file from an FTP server. The basic syntax is:
 
@@ -196,18 +186,19 @@ Run the file with "./"
 wget https://snpeff.blob.core.windows.net/versions/snpEff_latest_core.zip
 unzip snpEff_latest_core.zip
 ```
-## Start annotating data 
+
+#### Start annotating data 
 
 export SAMPLE="gh3665"
 export HG="hg19"
 export MEM="8"
-# prepare the file
+#### prepare the file
 java -jar snpEff/snpEff.jar ann -v hg19 ${SAMPLE}.vcf.gz | bgzip > ${SAMPLE}.ann.vcf.gz; tabix ${SAMPLE}.ann.vcf.gz
 
-# annotate by ClinVar database
+#### annotate by ClinVar database
 java -Xmx${MEM}G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz ${SAMPLE}.ann.vcf.gz | bgzip > ${SAMPLE}.ann.clinvar.vcf.gz; tabix ${SAMPLE}.ann.clinvar.vcf.gz
 
-# Extrart disease and pathogeniciti status
+#### Extrart disease and pathogeniciti status
 bcftools view ${SAMPLE}.ann.clinvar.vcf.gz | grep -v "##" | grep "CLN" | perl -lane 'print join "\t",(@F[0..4], /(?:CLNSIG|CLNDN)=[^;]+/g)' > ${SAMPLE}.processed.clinvar.txt 
 
 
@@ -236,15 +227,15 @@ Compile and install vcftools: `make && make install`
 
 Alternatively, you can also use package manager like apt-get, yum, Homebrew, etc to install vcftools, Example:
 
-Ubuntu: `apt-get install vcftools`
-CentOS: `yum install vcftools`
-MacOS: `brew install vcftools`
+* Ubuntu: `apt-get install vcftools`
+* CentOS: `yum install vcftools`
+* MacOS: `brew install vcftools`
 
 You can also make use of conda-forge channel to install vcftools.
 Please note that you may need to use "sudo" before the commands if you are installing on a system-wide level and don't have the appropriate permissions.
 Also, vcftools required a few more dependencies like ncurses and libbz2-dev (ubuntu) or bzip2-devel (CentOS) to be installed before the compilation.
 
-### Analysing dataset
+#### Analysing dataset
 
 
 ```bash
@@ -253,7 +244,7 @@ gunzip -k
 java -Xmx8G -jar snpEff/SnpSift.jar annotate clinvar.vcf.gz gh3665.vcf > output.vcf
 ```
 
-## Team
+## Team Members
 
 * Vasileios Alevizos
 * Ilias Georgousis
