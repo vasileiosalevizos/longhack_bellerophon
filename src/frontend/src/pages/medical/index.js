@@ -20,7 +20,7 @@ const Medical = () => {
     >
       <Grid item xs={11.5} md={12} mb="80px">
         <Header />
-        <Grid item md={12} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid item md={12} sx={{ mt:"80px",display: "flex", justifyContent: "center" }}>
           <TabMenu />
         </Grid>
         <Grid

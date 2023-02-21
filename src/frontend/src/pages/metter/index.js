@@ -1,11 +1,7 @@
 import React from "react";
 import { BottomMenu, Header } from "../../Component";
-import { Grid, Box, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { TabMenu } from "../../Component";
-
-import HomeIcon from "@mui/icons-material/Home";
-import NoteAddIcon from "@mui/icons-material/NoteAdd";
-import PlagiarismIcon from "@mui/icons-material/Plagiarism";
 import metter from "../../assets/meter.png";
 
 const Meeter = () => {
@@ -13,7 +9,7 @@ const Meeter = () => {
     <Grid container backgroundColor="#ffe6e6">
       <Grid item xs={12} md={12} height={{ md: "100vh", xs: "100vh" }}>
         <Header />
-        <Grid item md={12} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid item md={12} sx={{mt:"80px", display: "flex", justifyContent: "center" }}>
           <TabMenu />
         </Grid>
         <Grid

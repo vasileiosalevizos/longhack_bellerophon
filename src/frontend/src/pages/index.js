@@ -1,6 +1,11 @@
 import Home from "./home";
-import Medical from "./medical";
+import Login from "./login";
 import Meter from "./metter";
-import FileTransfer from "./Transfer";
+import Medical from "./medical";
+import FileTransfer from "./transfer";
+import User from "./user";
+import Upload from "./upload";
 
-export { Home, Medical, Meter ,FileTransfer};
+
+
+export { Home, Login,User, Meter, FileTransfer, Medical,Upload };

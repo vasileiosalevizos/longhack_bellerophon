@@ -1,9 +1,3 @@
-Run npm install or yarn to install the project's dependencies.
-Run npm start or yarn start to start the development server.
-The project should now be running at http://localhost:3000/ in your web browser.
-
-
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

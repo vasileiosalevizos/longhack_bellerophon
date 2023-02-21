@@ -66,10 +66,11 @@ const Transfer = () => {
       backgroundColor="#ffe6e6"
       sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
     >
-      <Grid item md={12} height="100vh">
+      <Grid item md={12} xs={12} height="100vh">
         <Header />
-        <Grid item md={12} sx={{ display: "flex", justifyContent: "center" }}>
+        <Grid item xs={12}md={12} sx={{mt:"80px", display: "flex", justifyContent: "center" }}>
           <TabMenu />
+          
         </Grid>
         <Grid
           item
@@ -138,6 +139,7 @@ const Transfer = () => {
                   id="select-image"
                   name="Upload a file"
                   style={{
+                    width:"220px",
                     opacity: "0",
                     marginTop: "8px",
                     position: "absolute",

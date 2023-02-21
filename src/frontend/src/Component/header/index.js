@@ -19,13 +19,14 @@ import { Link } from "react-router-dom";
 const drawerWidth = 240;
 const navItems = [
   { name: "Home", path: "/" },
+  { name: "Login", path: "/login" },
+  { name: "upload", path: "/upload" },
+  { name: "User", path: "/user" },
   { name: "Medical", path: "/Medical" },
-  { name: "FileTransfer", path: "/TransferFile" },
+  { name: "File Transfer", path: "/filetransfer" },
   { name: "Meter", path: "/Meter" },
 
-  // "Medical",
-  // "FileTransfer",
-  // "Meeter",
+  // { name: "Meter", path: "/Meter" },
 ];
 
 export const Header = (props) => {
@@ -39,16 +40,18 @@ export const Header = (props) => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Medical
+        ATHANASIA
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
+            <Link key={item} to={item.path} style={{ textDecoration: "none",color:"black" }}>
           <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item.name} />
-            </ListItemButton>
+              <ListItemButton sx={{ textAlign: "center" }}>
+                <ListItemText primary={item.name} />
+              </ListItemButton>
           </ListItem>
+            </Link>
         ))}
       </List>
     </Box>
@@ -58,10 +61,10 @@ export const Header = (props) => {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: { md: "flex", xs: "none" } }}>
+    <Box sx={{ display: { md: "flex", xs: "flex" } }}>
       <CssBaseline />
       <AppBar component="nav">
-        <Toolbar sx={{ backgroundColor: "#ffe6e6", color: "black" }}>
+        <Toolbar sx={{ backgroundColor: "#f1f1f1", color: "black" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -77,19 +80,27 @@ export const Header = (props) => {
             sx={{
               pl: "60px",
               flexGrow: 1,
-              display: { xs: "none", sm: "block" },
+              display: { xs: "flex", sm: "block" },
             }}
           >
-            Medical
+            ATHANASIA
           </Typography>
           <Box sx={{ pr: "60px", display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
               <Link
-              key={item}
+                key={item}
                 to={item.path}
-                style={{  textDecoration: "none" }}
+                style={{ textDecoration: "none" }}
               >
-                <Button key={item.name} sx={{textTransform: "capitalize",fontSize:"18px",marginRight:"10px", color: "black" }}>
+                <Button
+                  key={item.name}
+                  sx={{
+                    textTransform: "capitalize",
+                    fontSize: "18px",
+                    marginRight: "10px",
+                    color: "black",
+                  }}
+                >
                   {item.name}
                 </Button>
               </Link>
@@ -117,9 +128,9 @@ export const Header = (props) => {
           {drawer}
         </Drawer>
       </Box>
-      <Box component="main" sx={{ p: 3 }}>
+      {/* <Box component="main" sx={{ p: 3 }}>
         <Toolbar />
-      </Box>
+      </Box> */}
     </Box>
   );
 };
